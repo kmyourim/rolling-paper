@@ -11,6 +11,8 @@ jobs:
     steps: 
     - name: Checkout 
       uses: actions/checkout@v2 
+      with: 
+        submodules: true # 서브모듈도 자동으로 초기화하고 업데이트
        
     - name: Login to Docker Hub               # Docker Hub 로그인 
       uses: docker/login-action@v1 
